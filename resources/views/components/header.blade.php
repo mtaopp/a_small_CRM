@@ -10,15 +10,15 @@
 <body class="bg-prime">
 
     <header class="bg-second text-prime w-100">
-        <div class="container m-auto">
-            <div>
-                LOGO
+        <div class="container m-auto flex items-center">
+            <div class="flex-none">
+                <x-logo width="2rem"/>
             </div>
-            <div>
-                {{ $pageTitle }}
+            <div class="flex-grow text-center my-2">
+                <p>{{ $pageTitle }}</p>
             </div>
-            <div>
-                Logout
+            <div class="flex-none">
+                <x-exit-icon width="1.5rem"/>
             </div>
         </div>
     </header>
