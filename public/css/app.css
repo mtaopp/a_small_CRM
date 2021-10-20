@@ -31880,6 +31880,51 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+:root {
+  --primary-bg-color: rgba(98, 110, 189, 1);
+  --secondary-bg-color: rgba(58, 65, 111, 1);
+  --tertiary-bg-color: rgba(47, 97, 128, 1);
+  --primary-text-color: rgba(170, 223, 255, 1);
+  --secondary-text-color: rgba(255, 255, 255, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.bg-prime {
+  background-color: var(--primary-bg-color);
+}
+
+.bg-second {
+  background-color: var(--secondary-bg-color);
+}
+
+.bg-third {
+  background-color: var(--tertiary-bg-color);
+}
+
+.text-prime {
+  color: var(--primary-text-color);
+}
+
+.text-second {
+  color: var(--secondary-text-color);
+}
+
+/*
+.card-left {
+    background-image: url(/public/svg/backgrounds/card-rightside.svg);
+}
+
+.card-right {
+    background-image: url(/public/svg/backgrounds/card-rightside.svg);
+}
+*/
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
