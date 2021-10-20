@@ -22,8 +22,8 @@
             </div>
         </div>
     </header>
-    <main class="w-100">
+    <main class="w-100 text-prime">
         <div class="container m-auto">
-
+            <x-users-edit-icon : width="1rem"/>
         </div>
     </main>
