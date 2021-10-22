@@ -19,7 +19,14 @@
             </div>
             <div class="flex-none">
                 @auth
-                    <x-exit-icon width="1.5rem"/>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+
+                        <x-exit-icon width="1.5rem"/>
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                    </form>
 
                     @else
                     <div class="w-2">
