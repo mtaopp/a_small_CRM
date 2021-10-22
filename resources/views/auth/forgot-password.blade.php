@@ -23,7 +23,7 @@
                     <br>
                     <br>
                     <div class="text-center">
-                        <x-button type="submit" text="Register"/>
+                        <x-button type="submit" text="Reset"/>
                     </div>
                 </x-form>
             </div>

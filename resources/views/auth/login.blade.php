@@ -22,7 +22,7 @@
                     <br>
                     <br>
                     <div class="text-center">
-                        <x-button type="submit" text="Register"/>
+                        <x-button type="submit" text="Login"/>
                     </div>
                 </x-form>
             </div>
