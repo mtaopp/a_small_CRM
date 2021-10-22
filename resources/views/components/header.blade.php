@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>CRM | {{ $pageTitle }}</title>
 </head>
-<body class="bg-prime">
+<body class="bg-prime flex flex-col">
 
     <header class="bg-second text-prime w-100">
         <div class="container m-auto flex items-center">
@@ -22,8 +22,3 @@
             </div>
         </div>
     </header>
-    <main class="w-100 text-prime">
-        <div class="container m-auto">
-            <x-users-edit-icon : width="1rem"/>
-        </div>
-    </main>

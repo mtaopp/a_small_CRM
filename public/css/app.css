@@ -31895,6 +31895,18 @@ video {
   box-sizing: border-box;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
 .bg-prime {
   background-color: var(--primary-bg-color);
 }
@@ -31903,8 +31915,16 @@ video {
   background-color: var(--secondary-bg-color);
 }
 
+.bg-second-color {
+  color: var(--secondary-bg-color);
+}
+
 .bg-third {
   background-color: var(--tertiary-bg-color);
+}
+
+.bg-third-color {
+  color: var(--tertiary-bg-color);
 }
 
 .text-prime {
@@ -31914,16 +31934,6 @@ video {
 .text-second {
   color: var(--secondary-text-color);
 }
-
-/*
-.card-left {
-    background-image: url(/public/svg/backgrounds/card-rightside.svg);
-}
-
-.card-right {
-    background-image: url(/public/svg/backgrounds/card-rightside.svg);
-}
-*/
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -188064,4 +188074,8 @@ video {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+
+
+
 
