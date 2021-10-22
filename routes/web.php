@@ -26,4 +26,4 @@ Route::get('/', function () {
 Route::get('/home', function () {
     dd(Auth::user());
     return view('home');
-});
+})->middleware('auth');

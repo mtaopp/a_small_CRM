@@ -1,4 +1,4 @@
-<x-header pageTitle="Login"/>
+<x-header pageTitle="Reset Password"/>
 <main class="w-100 text-prime">
     <x-card>
         <x-card-left>
@@ -6,14 +6,15 @@
         </x-card-left>
         <x-card-right>
             <div class="w-full my-12">
+
                 @if(session('status'))
                     <div class="bg-comp text-black text-center rounded-lg">
                         {{ session('status') }}
                     </div>
                 @endif
-                <x-form action="{{ route('login') }}">
+
+                <x-form action="{{ route('password.request') }}">
                     <x-input class="w-full text-black" id="email" type="text" label="E-Mail"/><br>
-                    <x-input class="w-full text-black" id="password" type="password" label="Password"/>
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

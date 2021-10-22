@@ -31884,6 +31884,7 @@ video {
   --primary-bg-color: rgba(98, 110, 189, 1);
   --secondary-bg-color: rgba(58, 65, 111, 1);
   --tertiary-bg-color: rgba(47, 97, 128, 1);
+  --complimantary-bg-color: rgba(189, 159, 60, 1);
   --primary-text-color: rgba(170, 223, 255, 1);
   --secondary-text-color: rgba(255, 255, 255, 1);
 }
@@ -31925,6 +31926,10 @@ body, html {
 
 .bg-third-color {
   color: var(--tertiary-bg-color);
+}
+
+.bg-comp {
+  background-color: var(--complimantary-bg-color);
 }
 
 .text-prime {
