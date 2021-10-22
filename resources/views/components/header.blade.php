@@ -9,7 +9,7 @@
 </head>
 <body class="bg-prime flex flex-col">
 
-    <header class="bg-second text-prime w-100">
+    <header class="bg-second text-prime w-100 z-1">
         <div class="container m-auto flex items-center">
             <div class="flex-none">
                 <x-logo width="2rem"/>
@@ -18,7 +18,14 @@
                 <p>{{ $pageTitle }}</p>
             </div>
             <div class="flex-none">
-                <x-exit-icon width="1.5rem"/>
+                @auth
+                    <x-exit-icon width="1.5rem"/>
+
+                    @else
+                    <div class="w-2">
+                    </div>
+
+                @endauth
             </div>
         </div>
     </header>

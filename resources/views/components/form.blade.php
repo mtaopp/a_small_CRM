@@ -1,1 +1,4 @@
-<form action="{{ $action }}" method="post">{{ $slot }}</form>
+<form class="w-full" action="{{ $action }}" method="post">
+    @csrf
+    {{ $slot }}
+</form>
