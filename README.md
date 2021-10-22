@@ -11,4 +11,10 @@ The goal:
     Special Feature creating PDF offers, confirmations, receipts
 
 ## Installation
-    Coming soon
+    Download and unzip
+
+    Open folder in Terminal:
+    $ sail up -d
+    $ sail artisan migrate --seed
+
+    Installation compete
