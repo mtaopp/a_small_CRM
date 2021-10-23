@@ -25,11 +25,11 @@
 
 
                     <a class="mr-3" href="/user-control">
-                        <x-user-icon width="1.15rem"/>
+                        <x-icons.user-icon width="1.15rem"/>
                     </a>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 
-                        <x-exit-icon width="1.5rem"/>
+                        <x-icons.exit-icon width="1.5rem"/>
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">

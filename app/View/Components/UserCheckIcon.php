@@ -23,6 +23,6 @@ class UsersCheckIcon extends Component
      */
     public function render()
     {
-        return view('components.icons.users-check-icon');
+        return view('components.icons.user-check-icon');
     }
 }

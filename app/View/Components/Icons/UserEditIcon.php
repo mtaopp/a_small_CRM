@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class UsersCogIcon extends Component
+class UsersEditIcon extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class UsersCogIcon extends Component
      */
     public function render()
     {
-        return view('components.icons.users-cog-icon');
+        return view('components.icons.user-edit-icon');
     }
 }

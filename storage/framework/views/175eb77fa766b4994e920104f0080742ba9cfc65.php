@@ -36,30 +36,30 @@
 
 
                     <a class="mr-3" href="/user-control">
-                        <?php if (isset($component)) { $__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1 = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\UserIcon::class, []); ?>
-<?php $component->withName('user-icon'); ?>
+                        <?php if (isset($component)) { $__componentOriginal6203919a24afd155afc51a226aafd6da62e304db = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Icons\UserIcon::class, []); ?>
+<?php $component->withName('icons.user-icon'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes(['width' => '1.15rem']); ?>
-<?php if (isset($__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1)): ?>
-<?php $component = $__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1; ?>
-<?php unset($__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1); ?>
+<?php if (isset($__componentOriginal6203919a24afd155afc51a226aafd6da62e304db)): ?>
+<?php $component = $__componentOriginal6203919a24afd155afc51a226aafd6da62e304db; ?>
+<?php unset($__componentOriginal6203919a24afd155afc51a226aafd6da62e304db); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
                     </a>
                     <a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 
-                        <?php if (isset($component)) { $__componentOriginala19789a59f7b6ec5c36677729a4f287ccffc7f7d = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\ExitIcon::class, []); ?>
-<?php $component->withName('exit-icon'); ?>
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.icons.exit-icon','data' => ['width' => '1.5rem']]); ?>
+<?php $component->withName('icons.exit-icon'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes(['width' => '1.5rem']); ?>
-<?php if (isset($__componentOriginala19789a59f7b6ec5c36677729a4f287ccffc7f7d)): ?>
-<?php $component = $__componentOriginala19789a59f7b6ec5c36677729a4f287ccffc7f7d; ?>
-<?php unset($__componentOriginala19789a59f7b6ec5c36677729a4f287ccffc7f7d); ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

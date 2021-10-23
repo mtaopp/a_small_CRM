@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Icons;
 
 use Illuminate\View\Component;
 
@@ -13,6 +13,7 @@ class UserIcon extends Component
      */
     public function __construct()
     {
+        //
     }
 
     /**
