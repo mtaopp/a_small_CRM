@@ -16,15 +16,15 @@
     <div class="container m-auto py-5 h-full flex ">
         <div class="w-full place-self-center -mt-3">
             <div class="w-8/12 m-auto px-5 mb-3 flex justify-between">
-                <a href="/user-control"><?php if (isset($component)) { $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8 = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\BackIcon::class, []); ?>
-<?php $component->withName('back-icon'); ?>
+                <a href="/user-control"><?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.icons.back-icon','data' => ['width' => '2rem']]); ?>
+<?php $component->withName('icons.back-icon'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes(['width' => '2rem']); ?>
-<?php if (isset($__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8)): ?>
-<?php $component = $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8; ?>
-<?php unset($__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8); ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?></a>

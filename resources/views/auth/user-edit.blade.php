@@ -5,7 +5,7 @@
     <div class="container m-auto py-5 h-full flex ">
         <div class="w-full place-self-center -mt-3">
             <div class="w-8/12 m-auto px-5 mb-3 flex justify-between">
-                <a href="/user-control"><x-back-icon width="2rem"/></a>
+                <a href="/user-control"><x-icons.back-icon width="2rem"/></a>
             </div>
             <x-card>
                 <x-card-left>
