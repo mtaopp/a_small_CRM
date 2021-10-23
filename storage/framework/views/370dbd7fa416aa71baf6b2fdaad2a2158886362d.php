@@ -11,8 +11,22 @@
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <div>
-   You're logged in!<!-- The best way to take care of the future is to take care of the present moment. - Thich Nhat Hanh -->
-   <?php echo e(dd(Auth::user())); ?>
 
+
+    <?php if(session('message')): ?>
+        <div class="bg-comp text-black text-center rounded-lg">
+            <?php echo e(session('message')); ?>
+
+            <?php
+
+               // dd( session());
+
+            ?>
+
+        </div>
+    <?php endif; ?>
+
+   You're logged in!<!-- The best way to take care of the future is to take care of the present moment. - Thich Nhat Hanh -->
+   
 </div>
 <?php /**PATH /var/www/html/resources/views/layouts/app-layout.blade.php ENDPATH**/ ?>
