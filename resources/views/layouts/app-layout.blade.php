@@ -1,4 +1,4 @@
-<x-header pageTitle="Login"/>
+<x-header pageTitle="Home"/>
 <main>
     <div>
         @if(session('message'))

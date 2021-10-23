@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('home');
-});
+})->middleware('verified');
 
 Route::get('/home', function () {
     return view('home');
