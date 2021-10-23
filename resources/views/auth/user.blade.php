@@ -1,4 +1,4 @@
-<x-header pageTitle="Registration"/>
+<x-header pageTitle="User Control"/>
 <main class="w-100 text-prime">
 
 
