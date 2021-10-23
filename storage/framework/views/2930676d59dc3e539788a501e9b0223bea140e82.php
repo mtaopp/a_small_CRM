@@ -96,6 +96,7 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
+                    <a href="/forgot-password">Forgot password?</a>
                     <br>
                     <br>
                     <div class="text-center">

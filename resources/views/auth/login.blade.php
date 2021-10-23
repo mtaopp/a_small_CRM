@@ -19,6 +19,7 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
+                    <a href="/forgot-password">Forgot password?</a>
                     <br>
                     <br>
                     <div class="text-center">
