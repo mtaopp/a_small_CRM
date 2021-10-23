@@ -9,7 +9,7 @@
                     <x-logo class="m-auto" width="100"/>
                 </x-card-left>
                 <x-card-right>
-                    <x-form action="{{ route('password.update') }}">
+                    <x-form method="POST" action="{{ route('password.update') }}">
                         <input type="hidden" name="token" value="{{$request->route('token')}}">
 
                         <x-input class="w-full text-black" id="email" type="text" label="E-Mail" value="{{ $request->email }}"/>

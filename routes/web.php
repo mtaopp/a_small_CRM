@@ -27,4 +27,6 @@ Route::get('/home', function () {
 })->middleware('auth', 'verified');
 
 
-Route::get('/user-control', 'UserController@index')->middleware('auth', 'verified');
+Route::get('/user-control', 'UserController@showUser')->middleware('auth', 'verified');
+
+Route::view('/user-edit', 'auth.user-edit')->middleware('auth', 'verified');

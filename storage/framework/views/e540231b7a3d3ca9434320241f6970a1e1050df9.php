@@ -16,7 +16,7 @@
     <div class="container m-auto py-5 h-full flex ">
         <div class="w-full place-self-center -mt-3">
             <div class="w-8/12 m-auto px-5 mb-3 flex justify-between">
-                <a href="/home"><?php if (isset($component)) { $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8 = $component; } ?>
+                <a href="/user-control"><?php if (isset($component)) { $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8 = $component; } ?>
 <?php $component = $__env->getContainer()->make(App\View\Components\BackIcon::class, []); ?>
 <?php $component->withName('back-icon'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -25,18 +25,6 @@
 <?php if (isset($__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8)): ?>
 <?php $component = $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8; ?>
 <?php unset($__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8); ?>
-<?php endif; ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?></a>
-                <a href="/user-edit"><?php if (isset($component)) { $__componentOriginal77aa205743fab5771269481633563d443cc9f4bb = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\EditIcon::class, []); ?>
-<?php $component->withName('edit-icon'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['width' => '2rem']); ?>
-<?php if (isset($__componentOriginal77aa205743fab5771269481633563d443cc9f4bb)): ?>
-<?php $component = $__componentOriginal77aa205743fab5771269481633563d443cc9f4bb; ?>
-<?php unset($__componentOriginal77aa205743fab5771269481633563d443cc9f4bb); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?></a>
@@ -78,41 +66,80 @@
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes([]); ?>
                     <div class="w-full">
+                        <?php if(session('status') == "profile-information-updated"): ?>
+                            <div class="bg-comp text-black text-center rounded-lg">
+                                <p>Profile has been updated</p>
+                            </div>
+                        <?php endif; ?>
 
-                        <p>
-                            Name: <?php echo e($user->name); ?>
-
-                        </p>
-                        <p>
-                            E-Mail: <?php echo e($user->email); ?>
-
-                        </p>
-                        <p>
-                            Joined: <?php echo e($user->created_at); ?>
-
-                        </p>
-                        <p>
-                            Role: <?php echo e($user->roles[0]->name); ?>
-
-                        </p>
-                        <br>
-
-                        <br>
-                        <div class="text-center">
+                        <form class="w-full" action="<?php echo e(route('user-profile-information.update')); ?>" method="POST">
+                            <?php echo csrf_field(); ?>
+                            <?php echo method_field('PUT'); ?>
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.button','data' => ['class' => 'bg-comp text-black','type' => 'submit','text' => 'Change Password']]); ?>
-<?php $component->withName('button'); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['class' => 'w-full text-black','value' => ''.e(old('name') ?? auth()->user()->name).'','id' => 'name','type' => 'text','label' => 'Name:']]); ?>
+<?php $component->withName('input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['class' => 'bg-comp text-black','type' => 'submit','text' => 'Change Password']); ?>
+<?php $component->withAttributes(['class' => 'w-full text-black','value' => ''.e(old('name') ?? auth()->user()->name).'','id' => 'name','type' => 'text','label' => 'Name:']); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-                        </div>
-
+                            <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong><?php echo e($message); ?></strong>
+                                </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                            <br>
+                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['class' => 'w-full text-black','value' => ''.e(old('email') ?? auth()->user()->email).'','id' => 'email','type' => 'text','label' => 'E-Mail:']]); ?>
+<?php $component->withName('input'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['class' => 'w-full text-black','value' => ''.e(old('email') ?? auth()->user()->email).'','id' => 'email','type' => 'text','label' => 'E-Mail:']); ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+                            <?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong><?php echo e($message); ?></strong>
+                                </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                            <br>
+                            <div class="text-center">
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.button','data' => ['type' => 'submit','text' => 'Update']]); ?>
+<?php $component->withName('button'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['type' => 'submit','text' => 'Update']); ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+                            </div>
+                        </form>
                     </div>
                  <?php if (isset($__componentOriginal0674a6f78b899dd665c58fb6c35e4f8f489b2d59)): ?>
 <?php $component = $__componentOriginal0674a6f78b899dd665c58fb6c35e4f8f489b2d59; ?>
@@ -141,4 +168,4 @@
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php /**PATH /var/www/html/resources/views/auth/user.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/html/resources/views/auth/user-edit.blade.php ENDPATH**/ ?>

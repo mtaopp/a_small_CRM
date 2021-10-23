@@ -19,7 +19,7 @@
                             </div>
                         @endif
                         <h1 class="text-center text-2xl">You must verify your email adress, please check your email for a verification link.</h1>
-                        <x-form action="{{ route('verification.send') }}">
+                        <x-form method="POST" action="{{ route('verification.send') }}">
                             <br>
                             <br>
                             <div class="text-center">

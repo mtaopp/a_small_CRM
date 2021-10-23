@@ -17,7 +17,7 @@
                             </div>
                         @endif
 
-                        <x-form action="{{ route('password.request') }}">
+                        <x-form method="POST" action="{{ route('password.request') }}">
                             <x-input class="w-full text-black" id="email" type="text" label="E-Mail"/><br>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">

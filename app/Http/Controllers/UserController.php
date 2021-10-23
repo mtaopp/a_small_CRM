@@ -14,8 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        return view('auth.user', ['user' => $user]);
+        //
     }
 
     /**
@@ -83,4 +82,33 @@ class UserController extends Controller
     {
         //
     }
+
+
+
+
+
+
+
+    /**
+     * Displays User Profile
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showUser()
+    {
+        $user = Auth::user();
+        return view('auth.user', ['user' => $user]);
+    }
+
+    /**
+     * Displays User Profile
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function editUser()
+    {
+        $user = Auth::user();
+        return view('auth.user-edit', ['user' => $user]);
+    }
+
 }

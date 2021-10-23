@@ -59,11 +59,11 @@
                             </div>
                         <?php endif; ?>
                         <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.form','data' => ['action' => ''.e(route('login')).'']]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.form','data' => ['method' => 'post','action' => ''.e(route('login')).'']]); ?>
 <?php $component->withName('form'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['action' => ''.e(route('login')).'']); ?>
+<?php $component->withAttributes(['method' => 'post','action' => ''.e(route('login')).'']); ?>
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['class' => 'w-full text-black','id' => 'email','type' => 'text','label' => 'E-Mail']]); ?>
 <?php $component->withName('input'); ?>

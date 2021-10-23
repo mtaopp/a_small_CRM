@@ -1,4 +1,4 @@
-<form class="w-full" action="{{ $action }}" method="post">
+<form {{ $attributes->merge(['class', 'w-full']) }} >
     @csrf
     {{ $slot }}
 </form>

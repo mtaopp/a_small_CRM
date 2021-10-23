@@ -9,7 +9,7 @@
                     <x-logo class="m-auto" width="100"/>
                 </x-card-left>
                 <x-card-right>
-                    <x-form action="{{ route('register') }}">
+                    <x-form method="POST" action="{{ route('register') }}">
                         <x-input class="w-full text-black" id="name" type="text" label="Name:"/>
                         @error('name')
                             <span class="invalid-feedback" role="alert">

@@ -15,7 +15,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <x-form action="{{ route('login') }}">
+                        <x-form method="post" action="{{ route('login') }}">
                             <x-input class="w-full text-black" id="email" type="text" label="E-Mail"/><br>
                             <x-input class="w-full text-black" id="password" type="password" label="Password"/>
                             @error('email')

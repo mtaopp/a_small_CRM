@@ -1,4 +1,4 @@
-<form class="w-full" action="<?php echo e($action); ?>" method="post">
+<form <?php echo e($attributes->merge(['class', 'w-full'])); ?> >
     <?php echo csrf_field(); ?>
     <?php echo e($slot); ?>
 
