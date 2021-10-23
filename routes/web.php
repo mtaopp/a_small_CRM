@@ -30,3 +30,5 @@ Route::get('/home', function () {
 Route::get('/user-control', 'UserController@showUser')->middleware('auth', 'verified');
 
 Route::view('/user-edit', 'auth.user-edit')->middleware('auth', 'verified');
+
+Route::view('/change-password', 'auth.change-password')->middleware('auth', 'verified');

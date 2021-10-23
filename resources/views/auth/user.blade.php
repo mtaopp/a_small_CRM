@@ -31,7 +31,7 @@
 
                         <br>
                         <div class="text-center">
-                            <x-button class="bg-comp text-black" type="submit" text="Change Password"/>
+                            <a href="/change-password"><x-button class="bg-comp text-black" type="submit" text="Change Password"/></a>
                         </div>
 
                     </div>
