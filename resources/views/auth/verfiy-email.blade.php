@@ -1,4 +1,4 @@
-<x-header pageTitle="Login"/>
+<x-header pageTitle="E-Mail Verification"/>
 <main class="w-100 text-prime">
     <x-card>
         <x-card-left>

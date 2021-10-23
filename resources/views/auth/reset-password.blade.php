@@ -1,4 +1,4 @@
-<x-header pageTitle="Registration"/>
+<x-header pageTitle="Reset Password"/>
 <main class="w-100 text-prime">
     <x-card>
         <x-card-left>
