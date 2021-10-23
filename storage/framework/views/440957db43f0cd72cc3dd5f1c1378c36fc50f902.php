@@ -1,9 +1,9 @@
 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.header','data' => ['pageTitle' => 'Login']]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.header','data' => ['pageTitle' => 'Registration']]); ?>
 <?php $component->withName('header'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['pageTitle' => 'Login']); ?>
+<?php $component->withAttributes(['pageTitle' => 'Registration']); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
@@ -13,8 +13,34 @@
 <main class="w-100 text-prime">
 
 
-    <div class="container m-auto py-5 h-full flex">
-        <div class="w-full place-self-center">
+    <div class="container m-auto py-5 h-full flex ">
+        <div class="w-full place-self-center -mt-3">
+            <div class="w-8/12 m-auto px-5 mb-3 flex justify-between">
+                <a href="/home"><?php if (isset($component)) { $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\BackIcon::class, []); ?>
+<?php $component->withName('back-icon'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['width' => '2rem']); ?>
+<?php if (isset($__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8)): ?>
+<?php $component = $__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8; ?>
+<?php unset($__componentOriginal79668cc2b9597c5cf7427445c1c683aff5cb1ea8); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?></a>
+                <a href="/user.edit"><?php if (isset($component)) { $__componentOriginal77aa205743fab5771269481633563d443cc9f4bb = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\EditIcon::class, []); ?>
+<?php $component->withName('edit-icon'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['width' => '2rem']); ?>
+<?php if (isset($__componentOriginal77aa205743fab5771269481633563d443cc9f4bb)): ?>
+<?php $component = $__componentOriginal77aa205743fab5771269481633563d443cc9f4bb; ?>
+<?php unset($__componentOriginal77aa205743fab5771269481633563d443cc9f4bb); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?></a>
+            </div>
             <?php if (isset($component)) { $__componentOriginal5f1c24da064cdf37917762bf37a30d0804319ee8 = $component; } ?>
 <?php $component = $__env->getContainer()->make(App\View\Components\Card::class, []); ?>
 <?php $component->withName('card'); ?>
@@ -51,78 +77,42 @@
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php $component->withAttributes([]); ?>
-                    <div class="w-full my-12">
-                        <?php if(session('status')): ?>
-                            <div class="bg-comp text-black text-center rounded-lg">
-                                <?php echo e(session('status')); ?>
+                    <div class="w-full">
 
-                            </div>
-                        <?php endif; ?>
-                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.form','data' => ['action' => ''.e(route('login')).'']]); ?>
-<?php $component->withName('form'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['action' => ''.e(route('login')).'']); ?>
+                        <p>
+                            Name: <?php echo e($user->name); ?>
+
+                        </p>
+                        <p>
+                            E-Mail: <?php echo e($user->email); ?>
+
+                        </p>
+                        <p>
+                            Joined: <?php echo e($user->created_at); ?>
+
+                        </p>
+                        <p>
+                            Role: <?php echo e($user->roles[0]->name); ?>
+
+                        </p>
+                        <br>
+
+                        <br>
+                        <div class="text-center">
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['class' => 'w-full text-black','id' => 'email','type' => 'text','label' => 'E-Mail']]); ?>
-<?php $component->withName('input'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['class' => 'w-full text-black','id' => 'email','type' => 'text','label' => 'E-Mail']); ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?><br>
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['class' => 'w-full text-black','id' => 'password','type' => 'password','label' => 'Password']]); ?>
-<?php $component->withName('input'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['class' => 'w-full text-black','id' => 'password','type' => 'password','label' => 'Password']); ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-                            <?php $__errorArgs = ['email'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                                <span class="invalid-feedback" role="alert">
-                                    <strong><?php echo e($message); ?></strong>
-                                </span>
-                            <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                            <a href="/forgot-password">Forgot password?</a>
-                            <br>
-                            <br>
-                            <div class="text-center">
-                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.button','data' => ['type' => 'submit','text' => 'Login']]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.button','data' => ['class' => 'bg-comp text-black','type' => 'submit','text' => 'Change Password']]); ?>
 <?php $component->withName('button'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['type' => 'submit','text' => 'Login']); ?>
+<?php $component->withAttributes(['class' => 'bg-comp text-black','type' => 'submit','text' => 'Change Password']); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-                            </div>
-                         <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
+                        </div>
+
                     </div>
                  <?php if (isset($__componentOriginal0674a6f78b899dd665c58fb6c35e4f8f489b2d59)): ?>
 <?php $component = $__componentOriginal0674a6f78b899dd665c58fb6c35e4f8f489b2d59; ?>
@@ -151,4 +141,4 @@ unset($__errorArgs, $__bag); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php /**PATH /var/www/html/resources/views/auth/login.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/html/resources/views/auth/user.blade.php ENDPATH**/ ?>

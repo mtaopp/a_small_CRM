@@ -12,7 +12,9 @@
     <header class="bg-second text-prime w-100 z-1">
         <div class="container m-auto flex items-center">
             <div class="flex-none">
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+
+                <a href="/home">
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.logo','data' => ['width' => '2rem']]); ?>
 <?php $component->withName('logo'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -24,12 +26,29 @@
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
+                </a>
             </div>
             <div class="flex-grow text-center my-2">
                 <p><?php echo e($pageTitle); ?></p>
             </div>
-            <div class="flex-none">
+            <div class="flex-none flex flex-inline place-items-center">
                 <?php if(auth()->guard()->check()): ?>
+
+
+                    <a class="mr-3" href="/user-control">
+                        <?php if (isset($component)) { $__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\UserIcon::class, []); ?>
+<?php $component->withName('user-icon'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['width' => '1.15rem']); ?>
+<?php if (isset($__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1)): ?>
+<?php $component = $__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1; ?>
+<?php unset($__componentOriginal031ca11460d10373cfb9e69955099b144f9935b1); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+                    </a>
                     <a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 
                         <?php if (isset($component)) { $__componentOriginala19789a59f7b6ec5c36677729a4f287ccffc7f7d = $component; } ?>

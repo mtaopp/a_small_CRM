@@ -25,3 +25,6 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 })->middleware('auth', 'verified');
+
+
+Route::get('/user-control', 'UserController@index')->middleware('auth', 'verified');

@@ -1,6 +1,4 @@
-<div class="container m-auto py-5 h-full flex">
 
-    <div class="w-full place-self-center">
 
         <div class="w-8/12 m-auto">
             <div class="w-full flex">

@@ -12,13 +12,21 @@
     <header class="bg-second text-prime w-100 z-1">
         <div class="container m-auto flex items-center">
             <div class="flex-none">
-                <x-logo width="2rem"/>
+
+                <a href="/home">
+                    <x-logo width="2rem"/>
+                </a>
             </div>
             <div class="flex-grow text-center my-2">
                 <p>{{ $pageTitle }}</p>
             </div>
-            <div class="flex-none">
+            <div class="flex-none flex flex-inline place-items-center">
                 @auth
+
+
+                    <a class="mr-3" href="/user-control">
+                        <x-user-icon width="1.15rem"/>
+                    </a>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 
                         <x-exit-icon width="1.5rem"/>
