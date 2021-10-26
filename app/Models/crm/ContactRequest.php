@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class ContactRequest extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'is_created',
+        'has_cleaning',
+        'has_moving',
+        'moving_id',
+        'moving_id',
+    ];
 }

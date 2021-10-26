@@ -15,6 +15,11 @@ class CreateContactRequestsTable extends Migration
     {
         Schema::create('contact_requests', function (Blueprint $table) {
             $table->id();
+            $table->integer('is_created')->nullable();
+            $table->integer('has_moving')->nullable();
+            $table->integer('moving_id')->nullable();
+            $table->integer('has_cleaning')->nullable();
+            $table->integer('cleaning_id')->nullable();
             $table->timestamps();
         });
     }
