@@ -1,5 +1,5 @@
 <x-header pageTitle="E-Mail Verification"/>
-<main class="w-100 text-prime">
+<main class="w-100 text-lightblue">
 
 
 

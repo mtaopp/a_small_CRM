@@ -9,7 +9,7 @@
 </head>
 <body class="bg-prime flex flex-col">
 
-    <header class="bg-second text-prime w-100 z-1">
+    <header class="bg-second text-lightblue w-100 z-1">
         <div class="container m-auto flex items-center">
             <div class="flex-none">
 

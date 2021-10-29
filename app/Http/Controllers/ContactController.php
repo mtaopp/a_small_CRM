@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\crm\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
@@ -14,7 +18,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::all();
+        return view('crm.contacts', ['contacts' => $contacts]);
     }
 
     /**
@@ -25,6 +30,7 @@ class ContactController extends Controller
     public function create()
     {
         //
+        return view('crm.new-contact');
     }
 
     /**
@@ -33,9 +39,60 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Contact $contact)
     {
+        $request['tel'] = (string)preg_replace("/[^0-9]/", "", $request->tel);
+
+        $validator = Validator::make($request->all(), [
+            'firstname'     => 'required|string|max:255',
+            'lastname'      => 'required|string|max:255',
+            'adress'        => 'required|string|max:255',
+            'house'         => 'required|string|max:255',
+            'postcode'      => 'required|integer',
+            'city'          => 'required|string|max:255',
+            'tel'           => 'string',
+            'email'         => 'required|email|unique:contacts,email,'.$contact,
+        ]);
+
+
+        if ($validator->fails()) {
+            return back()
+                        ->withErrors($validator)
+                        ->withInput();
+
+
         //
+        // Auth::user()->id;
+        // dd($request);
+        }
+        $date = now();
+        $cw = strftime('%V', $date->getTimestamp());
+
+        $getcws = Contact::where('cw', $cw)->get() ;
+
+
+        // dd (date("y").'-'.$cw.'-'.date("m").'-'.count($getcws)+1);
+
+
+
+        $contact = Contact::create([
+            'firstname' => $request['firstname'],
+            'lastname' => $request['lastname'],
+            'adress' => $request['adress'],
+            'house' => $request['house'],
+            'postcode' => $request['postcode'],
+            'city' => $request['city'],
+            'tel' => $request['tel'],
+            'created_by' => Auth::user()->id,
+            'email' => $request['email'],
+            'cw' => $cw,
+            'cid' => date("y").$cw.'-'.date("m").'-'.count($getcws)+1,
+        ]);
+
+
+        // return $user;
+
+        return $this->show($contact->id);
     }
 
     /**
@@ -44,9 +101,11 @@ class ContactController extends Controller
      * @param  \App\Models\crm\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
-    {
-        //
+    public function show($id){
+
+        $contact = Contact::findOrFail($id);
+
+        return view('crm.contact', ['contact' => $contact]);
     }
 
     /**

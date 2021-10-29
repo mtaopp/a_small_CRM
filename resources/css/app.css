@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --primary-bg-color: rgba(98, 110, 189, 1);
-    --secondary-bg-color: rgba(58, 65, 111, 1);
-    --tertiary-bg-color: rgba(47, 97, 128, 1);
-    --complimantary-bg-color: rgba(189, 159, 60, 1);
-
-    --primary-text-color: rgba(170, 223, 255, 1);
-    --secondary-text-color: rgba(255, 255, 255, 1);
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -32,34 +20,12 @@ body, html {
     height: 100%;
 }
 
-.bg-prime {
-    background-color: var(--primary-bg-color);
-}
 
-.bg-second {
-    background-color: var(--secondary-bg-color);
-}
-
-.bg-second-color {
-    color: var(--secondary-bg-color);
-}
-
-.bg-third {
-    background-color: var(--tertiary-bg-color);
-}
-.bg-third-color {
-    color: var(--tertiary-bg-color);
-}
-
-.bg-comp {
-    background-color: var(--complimantary-bg-color);
-}
-
-.text-prime {
-    color: var(--primary-text-color);
-}
-
-.text-second {
-    color: var(--secondary-text-color);
-}
-
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;
+    background-color:#FFFF00;
+    height: 1px;
+  }

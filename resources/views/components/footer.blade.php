@@ -1,4 +1,4 @@
-    <footer class="bg-second text-prime w-100 h-8">
+    <footer class="bg-second text-lightblue w-100 h-8">
         <div class="container m-auto">
 
         </div>

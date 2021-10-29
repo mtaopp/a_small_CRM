@@ -2,7 +2,7 @@
 
         <div class="w-8/12 m-auto">
             <div class="w-full flex">
-                <div class="w-1/3 flex bg-third-color">
+                <div class="w-1/3 flex text-third">
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.corner','data' => ['corner' => 'top-left']]); ?>
 <?php $component->withName('corner'); ?>
@@ -15,11 +15,11 @@
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-                    <div class="flex-auto bg-third text-prime relative"></div>
+                    <div class="flex-auto bg-third text-lightblue relative"></div>
                 </div>
                 <div class="w-2/3 flex bg-second-color">
-                    <div class="flex-auto bg-second text-prime"></div>
-                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                    <div class="flex-auto bg-second text-second"></div>
+                    <div class="flex-none bg-transparent text-second"><?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.corner','data' => ['corner' => 'top-right']]); ?>
 <?php $component->withName('corner'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -30,7 +30,7 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
+<?php endif; ?></div>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
 
         <div class="w-8/12 m-auto">
             <div class="w-full flex">
-                <div class="w-1/3 flex bg-third-color">
+                <div class="w-1/3 flex text-third">
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.corner','data' => ['corner' => 'bottom-left']]); ?>
 <?php $component->withName('corner'); ?>
@@ -60,11 +60,11 @@
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-                    <div class="flex-auto bg-third text-prime relative"></div>
+                    <div class="flex-auto bg-third text-lightblue relative"></div>
                 </div>
                 <div class="w-2/3 flex bg-second-color">
-                    <div class="flex-auto bg-second text-prime"><p></p></div>
-                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                    <div class="flex-auto bg-second text-second"></div>
+                    <div class="flex-none bg-transparent text-second"><?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.corner','data' => ['corner' => 'bottom-right']]); ?>
 <?php $component->withName('corner'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -75,7 +75,7 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
+<?php endif; ?></div>
                 </div>
             </div>
         </div>

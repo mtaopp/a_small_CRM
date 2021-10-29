@@ -1,5 +1,5 @@
 <x-header pageTitle="Registration"/>
-<main class="w-100 text-prime">
+<main class="w-100 text-lightblue">
 
 
     <div class="container m-auto py-5 h-full flex">

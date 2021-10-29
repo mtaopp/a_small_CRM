@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,15 +21,24 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('home');
-})->middleware('verified');
+})->middleware('verified', 'verified')->name('home');
 
 Route::get('/home', function () {
     return view('home');
 })->middleware('auth', 'verified');
 
 
-Route::get('/user-control', 'UserController@showUser')->middleware('auth', 'verified');
+Route::get('/user-control', 'UserController@showUser')->middleware('auth', 'verified')->name('user.control');
 
-Route::view('/user-edit', 'auth.user-edit')->middleware('auth', 'verified');
+Route::view('/user-edit', 'auth.user-edit')->middleware('auth', 'verified')->name('edit.user');
 
-Route::view('/change-password', 'auth.change-password')->middleware('auth', 'verified');
+Route::view('/change-password', 'auth.change-password')->middleware('auth', 'verified')->name('change.password');
+
+Route::get('/new-contact', 'ContactController@create')->middleware('auth', 'verified')->name('create.contact');
+Route::post('/new-contact', 'ContactController@store')->middleware('auth', 'verified')->name('store.contact');
+// route::put('/form', 'ContactController@index')->middleware('auth', 'verified')->name('test.put');
+
+
+Route::get('/contacts', 'ContactController@index')->middleware('auth', 'verified')->name('contacts');
+
+Route::get('/contact/{id}', 'ContactController@show')->middleware('auth', 'verified')->name('contact');

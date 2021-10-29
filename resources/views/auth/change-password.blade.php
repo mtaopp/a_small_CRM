@@ -1,5 +1,5 @@
 <x-header pageTitle="Change Password"/>
-<main class="w-100 text-prime">
+<main class="w-100 text-lightblue">
 
     <div class="container m-auto py-5 h-full flex ">
         <div class="w-full place-self-center -mt-3">
