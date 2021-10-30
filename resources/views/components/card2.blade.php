@@ -9,7 +9,7 @@
     </div>
 
     <div class="w-full m-auto ">
-        <div class="flex text-lightblue bg-third">
+        <div class="block text-lightblue bg-third">
             {{ $slot }}
         </div>
     </div>

@@ -42,3 +42,6 @@ Route::post('/new-contact', 'ContactController@store')->middleware('auth', 'veri
 Route::get('/contacts', 'ContactController@index')->middleware('auth', 'verified')->name('contacts');
 
 Route::get('/contact/{id}', 'ContactController@show')->middleware('auth', 'verified')->name('contact');
+
+Route::get('/edit-contact/{id}', 'ContactController@edit')->middleware('auth', 'verified')->name('edit.contact');
+Route::post('/edit-contact/{id}', 'ContactController@update')->middleware('auth', 'verified')->name('update.contact');

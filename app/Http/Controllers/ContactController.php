@@ -114,9 +114,11 @@ class ContactController extends Controller
      * @param  \App\Models\crm\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
-    {
-        //
+    public function edit($id){
+
+        $contact = Contact::findOrFail($id);
+
+        return view('crm.edit-contact', ['contact' => $contact]);
     }
 
     /**
@@ -126,9 +128,48 @@ class ContactController extends Controller
      * @param  \App\Models\crm\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Request $request, $id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+        // dd($contact);
+
+        $request['tel'] = (string)preg_replace("/[^0-9]/", "", $request->tel);
+
+
+        $validator = Validator::make($request->all(), [
+            'firstname'     => 'required|string|max:255',
+            'lastname'      => 'required|string|max:255',
+            'adress'        => 'required|string|max:255',
+            'house'         => 'required|string|max:255',
+            'postcode'      => 'required|integer',
+            'city'          => 'required|string|max:255',
+            'tel'           => 'string',
+            'email'         => 'required|email|unique:contacts,email,'.$contact->id,
+        ]);
+
+
+
+
+        if ($validator->fails()) {
+            return back()
+                        ->withErrors($validator)
+                        ->withInput();
+                        dd($validator);
+        }
+
+        $contact->update([
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'adress' => $request->adress,
+            'house' => $request->house,
+            'postcode' => $request->postcode,
+            'city' => $request->city,
+            'tel' => $request->tel,
+            'email' => $request->email,
+        ]);
+
+        return back()->with('message', 'Contact information updated ');
+
     }
 
     /**

@@ -10,7 +10,7 @@
             <div class="block w-full text-lightblue">
                 <div class="flex justify-between mb-4">
                     <a href="{{ route('contacts') }}"><x-icons.back-icon width="4rem"/></a>
-                    <a href="{{-- {{ route('edit.contact') }} --}}"><x-icons.edit-icon width="4rem"/></a>
+                    <a href="{{ route('edit.contact', ['id' => $contact->id]) }}"><x-icons.edit-icon width="4rem"/></a>
                 </div>
             </div>
             <x-card2 twWidth="w-full">
