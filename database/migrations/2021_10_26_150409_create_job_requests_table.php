@@ -15,7 +15,8 @@ class CreateJobRequestsTable extends Migration
     {
         Schema::create('job_requests', function (Blueprint $table) {
             $table->id();
-            $table->integer('conatct_id');
+            $table->string('job_id');
+            $table->integer('contact_id');
             $table->integer('is_created')->nullable();
             $table->integer('has_moving')->nullable();
             $table->integer('moving_id')->nullable();

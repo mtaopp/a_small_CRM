@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WrappingRequest;
+use App\Models\crm\WrappingRequest;
 use Illuminate\Http\Request;
 
 class WrappingRequestController extends Controller

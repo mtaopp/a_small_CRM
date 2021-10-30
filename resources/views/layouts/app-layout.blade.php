@@ -8,11 +8,17 @@
                 </div>
             @endif
 
-           You're logged in!
+           {{-- You're logged in! --}}
            {{-- {{ dd(Auth::user()); }} --}}
-            <div class="flex">
-                <a class="flex-grow w-full whitespace-nowrap hover:bg-comp bg-second mx-4 px-4 py-2 rounded-lg hover:text-second text-lightblue " href="{{ route ('contacts') }}">Contacts</a>
-                <a class="flex-grow w-full whitespace-nowrap hover:bg-comp bg-second mx-4 px-4 py-2 rounded-lg hover:text-second text-lightblue" href="{{ route ('create.contact') }}">New Contact</a>
+            <div class="flex flex-col">
+                <div class="flex flex-row w-96">
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="{{ route ('contacts') }}">Contacts</a>
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="{{ route ('create.contact') }}">New Contact</a>
+                </div>
+                <div class="flex flex-row py-3 w-96 mt-5">
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="{{ route ('jobs') }}">Jobs</a>
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="{{ route ('create.job') }}">New Job</a>
+                </div>
             </div>
         </div>
     </div>

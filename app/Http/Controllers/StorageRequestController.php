@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\StorageRequest;
+use App\Models\crm\StorageRequest;
 use Illuminate\Http\Request;
 
 class StorageRequestController extends Controller

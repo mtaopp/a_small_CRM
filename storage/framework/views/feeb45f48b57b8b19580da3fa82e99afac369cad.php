@@ -1,4 +1,4 @@
-<div class="<?php echo e($twWidth); ?>">
+<div <?php echo e($attributes); ?>>
 
     <div class="w-full m-auto ">
         <div class="flex text-third">

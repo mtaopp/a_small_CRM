@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UnwrappingRequest;
+use App\Models\crm\UnwrappingRequest;
 use Illuminate\Http\Request;
 
 class UnwrappingRequestController extends Controller

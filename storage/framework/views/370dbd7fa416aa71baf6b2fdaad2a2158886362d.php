@@ -20,11 +20,17 @@
                 </div>
             <?php endif; ?>
 
-           You're logged in!
            
-            <div class="flex">
-                <a class="flex-grow w-full whitespace-nowrap hover:bg-comp bg-second mx-4 px-4 py-2 rounded-lg hover:text-second text-lightblue " href="<?php echo e(route ('contacts')); ?>">Contacts</a>
-                <a class="flex-grow w-full whitespace-nowrap hover:bg-comp bg-second mx-4 px-4 py-2 rounded-lg hover:text-second text-lightblue" href="<?php echo e(route ('create.contact')); ?>">New Contact</a>
+           
+            <div class="flex flex-col">
+                <div class="flex flex-row w-96">
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="<?php echo e(route ('contacts')); ?>">Contacts</a>
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="<?php echo e(route ('create.contact')); ?>">New Contact</a>
+                </div>
+                <div class="flex flex-row py-3 w-96 mt-5">
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="<?php echo e(route ('jobs')); ?>">Jobs</a>
+                    <a class="flex-grow w-full py-3 whitespace-nowrap hover:bg-comp bg-second mx-4 rounded-lg hover:text-second text-lightblue text-center" href="<?php echo e(route ('create.job')); ?>">New Job</a>
+                </div>
             </div>
         </div>
     </div>

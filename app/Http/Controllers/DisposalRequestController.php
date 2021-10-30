@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DisposalRequest;
+use App\Models\crm\DisposalRequest;
 use Illuminate\Http\Request;
 
 class DisposalRequestController extends Controller

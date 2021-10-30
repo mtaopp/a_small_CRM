@@ -1,4 +1,4 @@
-<div class="{{ $twWidth }}">
+<div {{ $attributes }}>
 
     <div class="w-full m-auto ">
         <div class="flex text-third">

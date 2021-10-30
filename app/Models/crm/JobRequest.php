@@ -13,8 +13,9 @@ class JobRequest extends Model
         'contact_id',
         'is_created',
         'has_cleaning',
+        'cleaning_id',
         'has_moving',
         'moving_id',
-        'moving_id',
+        'job_id',
     ];
 }

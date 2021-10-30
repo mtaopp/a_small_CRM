@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\crm\Contact;
 use Illuminate\Http\Request;
+use App\Models\crm\JobRequest;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\Validator;
@@ -105,7 +107,14 @@ class ContactController extends Controller
 
         $contact = Contact::findOrFail($id);
 
-        return view('crm.contact', ['contact' => $contact]);
+        $jobs = DB::table('job_requests')->where('contact_id', "=", $contact->id)->get();
+
+
+
+        return view('crm.contact', [
+            'contact' => $contact,
+            'jobs' => $jobs,
+        ]);
     }
 
     /**

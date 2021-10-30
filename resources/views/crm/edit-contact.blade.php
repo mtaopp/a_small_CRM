@@ -79,7 +79,7 @@
                         </span>
                         @enderror
                         <div class="text-center mt-3">
-                            <x-button class="bg-comp" type="submit" text="Next"/>
+                            <x-button class="bg-comp" type="submit" text="Update"/>
                         </div>
                     </x-form>
                 </div>
