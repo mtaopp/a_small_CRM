@@ -9,6 +9,9 @@ The goal:
     Having a protected page to collect leads, manage the leads.
     Creating offers using customized forms.
     Special Feature creating PDF offers, confirmations, receipts
+    
+    
+For Database Scheme open a_small_crm.pdf
 
 ## Installation
     Download and unzip
